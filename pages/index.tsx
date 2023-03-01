@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export default function Home() {
-  return <AS>hiroo</AS>;
+  return <StyledHome>hiroo</StyledHome>;
 }
 
-const AS = styled.div`
+const StyledHome = styled.div`
   background-color: red;
 `;
