@@ -14,10 +14,12 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   
-  body {
+  body {   
+    display: flex;
+    align-items: center;
+    justify-content: center;   
     margin:0 auto;
     background-color: black;   
-    font-family: 'PressStart2P';
   }
 
   @font-face {  
@@ -39,7 +41,6 @@ const GlobalStyle = createGlobalStyle`
           transition: 0.3s;
         }
   }
-
 `;
 
 export default GlobalStyle;

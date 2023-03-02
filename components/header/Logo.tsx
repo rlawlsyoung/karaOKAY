@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Logo = () => {
   return (
-    <LogoContainer>
+    <LogoContainer className="flex-center">
       <IoMdMicrophone size={30} />
       KaraOKAY
     </LogoContainer>
@@ -12,9 +12,10 @@ const Logo = () => {
 
 const LogoContainer = styled.h1`
   font-family: 'Press Start 2P';
+  font-size: 24px;
 
   svg {
-    margin-right: 10px;
+    margin-right: 6px;
   }
 `;
 

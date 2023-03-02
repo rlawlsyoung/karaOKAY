@@ -5,7 +5,8 @@ import Logo from './Logo';
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo />
+      a
+      <Logo />s
     </HeaderContainer>
   );
 };
@@ -13,10 +14,10 @@ const Header = () => {
 const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100vw;
   color: white;
-  background-color: blue;
-  font-size: 24px;
 `;
 
 export default Header;

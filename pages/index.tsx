@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default function Home() {
-  return <StyledHome>hiroo</StyledHome>;
+  return <StyledHome className="page">hiroo</StyledHome>;
 }
 
 const StyledHome = styled.div`
