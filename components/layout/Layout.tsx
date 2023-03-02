@@ -17,6 +17,8 @@ const LayoutContainer = styled.div``;
 
 const LayoutInner = styled.div`
   width: 80vw;
+  height: calc(100vh - 50px);
+  color: white;
 `;
 
 export default Layout;
