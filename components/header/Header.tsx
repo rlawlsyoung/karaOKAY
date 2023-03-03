@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import LoginBtn from './LoginBtn';
 
+import { lightGray } from '@/styles/theme';
+
 const Header = () => {
   return (
     <HeaderContainer>
-      a
       <Logo />
       <LoginBtn />
     </HeaderContainer>
@@ -16,10 +17,11 @@ const Header = () => {
 const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
   height: 70px;
-  width: calc(100vw - 100px);
-  padding: 0 50px;
+  width: 100vw;
+  box-shadow: 0 4px 2px -2px ${lightGray};
   color: white;
 `;
 

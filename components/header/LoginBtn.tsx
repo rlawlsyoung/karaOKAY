@@ -11,6 +11,8 @@ const LoginBtn = () => {
 };
 
 const LoginBtnContainer = styled.div`
+  position: absolute;
+  right: 25px;
   width: 100px;
   height: 35px;
   border: 1px solid white;
