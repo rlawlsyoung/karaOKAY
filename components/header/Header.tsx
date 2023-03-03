@@ -22,6 +22,7 @@ const HeaderContainer = styled.header`
   height: 70px;
   width: 100vw;
   box-shadow: 0 4px 2px -2px ${lightGray};
+  background-color: black;
   color: white;
 `;
 

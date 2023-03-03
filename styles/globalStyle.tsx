@@ -4,10 +4,18 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
   * {    
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
+    background-color: black;   
   }
  
   a {
@@ -19,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;   
     margin:0 auto;
-    background-color: black;   
+    font-family: 'Pretendard-Regular'
   }
 
   @font-face {  
