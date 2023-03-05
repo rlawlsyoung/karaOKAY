@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
 
   @font-face {
-    font-family: 'Pretendard-Regular';
+    font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;   
     margin:0 auto;
-    font-family: 'Pretendard-Regular'
+    font-family: 'Pretendard'
   }
 
   @font-face {  
