@@ -15,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
-    background-color: black;   
   }
  
   a {
@@ -27,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;   
     margin:0 auto;
-    font-family: 'Pretendard'
+    font-family: 'Pretendard';
+    background-color: black;   
   }
 
   @font-face {  

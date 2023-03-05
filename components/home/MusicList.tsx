@@ -33,11 +33,10 @@ const MusicListContainer = styled.div`
 
 const Header = styled.div`
   display: flex;
+  padding-right: 15px;
   border-bottom: 1px solid ${lightGray};
-  background-color: transparent;
   p {
     padding: 15px 0;
-    background-color: transparent;
   }
 
   .num {
@@ -45,23 +44,22 @@ const Header = styled.div`
   }
 
   .title {
-    width: 50%;
+    width: 35%;
   }
 
   .singer,
   .lyricist,
   .composer {
-    width: 20%;
+    width: 15%;
   }
 `;
 
 const Body = styled.div`
   height: 40vh;
-  background-color: transparent;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
-    background-color: transparent;
+    width: 15px;
   }
 
   &::-webkit-scrollbar-thumb {
