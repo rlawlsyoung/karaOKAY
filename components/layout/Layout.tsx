@@ -16,7 +16,7 @@ const Layout = (props: LayoutProps) => {
 const LayoutContainer = styled.div``;
 
 const LayoutInner = styled.div`
-  width: 80vw;
+  width: 1080px;
   height: calc(100vh - 70px);
   color: white;
 `;

@@ -37,7 +37,7 @@ const Select = styled.select`
 `;
 
 const Search = styled.input`
-  width: 30vw;
+  width: calc(1080px - 190px);
   margin: 0 15px;
   border: none;
   outline: none;

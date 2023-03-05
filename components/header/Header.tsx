@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import LoginBtn from './LoginBtn';
 
-import { lightGray } from '@/styles/theme';
+import { lightBlack } from '@/styles/theme';
 
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const HeaderContainer = styled.header`
   position: relative;
   height: 70px;
   width: 100vw;
-  box-shadow: 0 4px 2px -2px ${lightGray};
+  box-shadow: 0 4px 2px -2px ${lightBlack};
   background-color: black;
   color: white;
 `;

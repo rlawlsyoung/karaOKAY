@@ -1,4 +1,5 @@
-const lightGray = '#1d1d1d';
+const lightBlack = '#1d1d1d';
+const lightGray = '#333333';
 const middleGray = '#909090';
 const deepGray = `#212121`;
 
@@ -7,4 +8,4 @@ const responsive = {
   tablet: 'screen and (max-width: 900px)',
   desktop: 'screen and (max-width: 1200px)',
 };
-export { lightGray, middleGray, deepGray, responsive };
+export { lightBlack, lightGray, middleGray, deepGray, responsive };
