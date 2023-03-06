@@ -1,3 +1,4 @@
+import { RecoilRoot } from 'recoil';
 import styled from 'styled-components';
 
 import SearchBar from '@/components/home/SearchBar';
@@ -6,8 +7,10 @@ import MusicList from '@/components/home/MusicList';
 export default function Home() {
   return (
     <StyledHome>
-      <SearchBar />
-      <MusicList />
+      <RecoilRoot>
+        <SearchBar />
+        <MusicList />
+      </RecoilRoot>
     </StyledHome>
   );
 }

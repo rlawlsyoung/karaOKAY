@@ -1,15 +1,35 @@
+import React, { useState, useRef } from 'react';
+import { useRecoilState } from 'recoil';
+import { searchedMusicAtom } from '@/atom';
+import axios from 'axios';
 import styled from 'styled-components';
 
 import { deepGray, blurredDeepGray, middleGray } from '@/styles/theme';
 
 const SearchBar = () => {
+  const [searchedMusic, setSearchedMusic] = useRecoilState(searchedMusicAtom);
+
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (searchRef.current) {
+      axios
+        .get(`https://api.manana.kr/karaoke/song/${searchRef.current.value}/tj.json`)
+        .then((res) => {
+          console.log(res.data);
+          setSearchedMusic(res.data);
+        });
+    }
+  };
+
   return (
-    <SearchBarContainer>
+    <SearchBarContainer onSubmit={handleSearch}>
       <Select>
         <option value="곡명">곡 명</option>
         <option value="가수명">가수 명</option>
       </Select>
-      <Search placeholder="곡/가수 명을 입력해주세요." />
+      <Search name="search" placeholder="곡/가수 명을 입력해주세요." ref={searchRef} />
       <Button>검색</Button>
     </SearchBarContainer>
   );

@@ -1,11 +1,13 @@
+import { useRecoilValue } from 'recoil';
+import { searchedMusicAtom } from '@/atom';
 import styled from 'styled-components';
 
 import Music from './Music';
 
-import { deepGray, lightGray, middleGray, blurredDeepGray } from '@/styles/theme';
+import { lightGray, middleGray, blurredDeepGray } from '@/styles/theme';
 
 const MusicList = () => {
-  const a = [1, 2, 3, 4, 5, 6, 65, 2, 45, 45, 45, 45, 4, 42, 4324];
+  const searchedMusic = useRecoilValue(searchedMusicAtom);
   return (
     <MusicListContainer>
       <Header>
@@ -16,8 +18,15 @@ const MusicList = () => {
         <p className="composer flex-center">작곡</p>
       </Header>
       <Body>
-        {a.map((music) => (
-          <Music />
+        {searchedMusic.map((music) => (
+          <Music
+            key={music.no}
+            no={music.no}
+            title={music.title}
+            singer={music.singer}
+            composer={music.composer}
+            lyricist={music.lyricist}
+          />
         ))}
       </Body>
     </MusicListContainer>

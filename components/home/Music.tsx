@@ -1,14 +1,17 @@
+import React from 'react';
 import { RiFileAddFill } from 'react-icons/ri';
 import styled from 'styled-components';
 
-const Music = () => {
+import MusicType from '@/atom';
+
+const Music: React.FC<MusicType> = ({ no, title, singer, composer, lyricist }) => {
   return (
     <MusicContainer>
-      <p className="num flex-center">12345</p>
-      <p className="title flex-center">Eastern Youth</p>
-      <p className="singer flex-center">초록불꽃소년단</p>
-      <p className="lyricist flex-center">조기철</p>
-      <p className="composer flex-center">조기철</p>
+      <p className="num flex-center">{no}</p>
+      <p className="title flex-center">{title}</p>
+      <p className="singer flex-center">{singer}</p>
+      <p className="lyricist flex-center">{composer}</p>
+      <p className="composer flex-center">{lyricist}</p>
       <RiFileAddFill size={26} />
     </MusicContainer>
   );
