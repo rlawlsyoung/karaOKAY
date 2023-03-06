@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Music from './Music';
 
-import { deepGray, lightBlack, lightGray, middleGray } from '@/styles/theme';
+import { deepGray, lightGray, middleGray, blurredDeepGray } from '@/styles/theme';
 
 const MusicList = () => {
   const a = [1, 2, 3, 4, 5, 6, 65, 2, 45, 45, 45, 45, 4, 42, 4324];
@@ -26,8 +26,9 @@ const MusicList = () => {
 
 const MusicListContainer = styled.div`
   width: 100%;
-  margin-top: 15px;
-  background-color: ${deepGray};
+  margin-top: 30px;
+  box-shadow: 0px 0px 10px 10px ${blurredDeepGray};
+  background-color: ${blurredDeepGray};
   color: ${middleGray};
 `;
 

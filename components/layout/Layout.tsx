@@ -8,12 +8,21 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   return (
     <LayoutContainer className="flex-center">
+      {/* <Image src="/images/karaoke.jpg" alt="" /> */}
       <LayoutInner> {props.children}</LayoutInner>
     </LayoutContainer>
   );
 };
 
-const LayoutContainer = styled.div``;
+const LayoutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url('/images/karaoke.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+`;
 
 const LayoutInner = styled.div`
   width: 1080px;
