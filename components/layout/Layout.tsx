@@ -8,7 +8,6 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   return (
     <LayoutContainer className="flex-center">
-      {/* <Image src="/images/karaoke.jpg" alt="" /> */}
       <LayoutInner> {props.children}</LayoutInner>
     </LayoutContainer>
   );

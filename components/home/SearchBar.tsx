@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { deepGray, middleGray } from '@/styles/theme';
+import { deepGray, blurredDeepGray, middleGray } from '@/styles/theme';
 
 const SearchBar = () => {
   return (
@@ -17,15 +17,14 @@ const SearchBar = () => {
 
 const SearchBarContainer = styled.form`
   display: flex;
-  background-color: rgba(33, 33, 33, 0.825);
+  box-shadow: 0px 0px 7.5px 7.5px ${blurredDeepGray};
+  background-color: ${blurredDeepGray};
   padding: 10px;
-  box-shadow: 0px 0px 10px 10px rgba(33, 33, 33, 0.825);
-  /* opacity: 0.85; */
 `;
 
 const Select = styled.select`
   width: 80px;
-  height: 40px;
+  height: 35px;
   border: none;
   outline: none;
   background-color: transparent;

@@ -18,6 +18,6 @@ const StyledHome = styled.div`
   align-items: center;
   justify-content: center;
 
-  margin-top: 20px;
+  margin: 30px 0;
   font-size: 18px;
 `;

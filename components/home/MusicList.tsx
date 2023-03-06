@@ -26,8 +26,8 @@ const MusicList = () => {
 
 const MusicListContainer = styled.div`
   width: 100%;
-  margin-top: 30px;
-  box-shadow: 0px 0px 10px 10px ${blurredDeepGray};
+  margin-top: 40px;
+  box-shadow: 0px 0px 7.5px 7.5px ${blurredDeepGray};
   background-color: ${blurredDeepGray};
   color: ${middleGray};
 `;
@@ -56,7 +56,7 @@ const Header = styled.div`
 `;
 
 const Body = styled.div`
-  height: 40vh;
+  height: calc(100vh - 278px);
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
