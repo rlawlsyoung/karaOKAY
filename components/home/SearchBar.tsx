@@ -15,7 +15,12 @@ const SearchBar = () => {
     e.preventDefault();
     if (searchRef.current) {
       axios
-        .get(`https://api.manana.kr/karaoke/song/${searchRef.current.value}/tj.json`)
+        .get(
+          `https://api.manana.kr/karaoke/song/${searchRef.current.value.replace(
+            /(\s*)/g,
+            '',
+          )}/tj.json`,
+        )
         .then((res) => {
           console.log(res.data);
           setSearchedMusic(res.data);

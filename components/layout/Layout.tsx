@@ -8,7 +8,7 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   return (
     <LayoutContainer className="flex-center">
-      <LayoutInner> {props.children}</LayoutInner>
+      <LayoutInner>{props.children}</LayoutInner>
     </LayoutContainer>
   );
 };
@@ -24,6 +24,8 @@ const LayoutContainer = styled.div`
 `;
 
 const LayoutInner = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 1080px;
   height: calc(100vh - 70px);
   color: white;

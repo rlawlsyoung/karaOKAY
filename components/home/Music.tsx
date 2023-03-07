@@ -20,6 +20,7 @@ const Music: React.FC<MusicType> = ({ no, title, singer, composer, lyricist }) =
 const MusicContainer = styled.div`
   display: flex;
   align-items: center;
+  font-size: 15px;
   p {
     padding: 15px 0;
   }
