@@ -5,7 +5,7 @@ import { searchedMusicAtom } from '@/atom';
 import { CgArrowsExchangeAltV } from 'react-icons/cg';
 import styled from 'styled-components';
 
-import { deepGray, blurredDeepGray, middleGray } from '@/styles/theme';
+import { responsive, blurredDeepGray, middleGray } from '@/styles/theme';
 
 const SearchBar = () => {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -81,6 +81,10 @@ const Search = styled.input`
   color: ${middleGray};
   font-family: 'Pretendard';
   font-size: 18px;
+
+  @media ${responsive.desktop} {
+    width: calc(90vw - 200px);
+  }
 `;
 
 const Button = styled.button`

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { responsive } from '@/styles/theme';
+
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -29,6 +31,10 @@ const LayoutInner = styled.div`
   width: 1080px;
   height: calc(100vh - 70px);
   color: white;
+
+  @media ${responsive.desktop} {
+    width: 90vw;
+  }
 `;
 
 export default Layout;
