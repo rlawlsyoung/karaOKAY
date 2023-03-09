@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Music from './Music';
 
-import { lightGray, middleGray, blurredDeepGray } from '@/styles/theme';
+import { responsive, lightGray, middleGray, blurredDeepGray } from '@/styles/theme';
 
 const MusicList = () => {
   const searchedMusic = useRecoilValue(searchedMusicAtom);
@@ -39,12 +39,17 @@ const MusicListContainer = styled.div`
   box-shadow: 0px 0px 7.5px 7.5px ${blurredDeepGray};
   background-color: ${blurredDeepGray};
   color: ${middleGray};
+
+  @media ${responsive.mobile} {
+    font-size: 14px;
+  }
 `;
 
 const Header = styled.div`
   display: flex;
   padding-right: 15px;
   border-bottom: 1px solid ${lightGray};
+  white-space: nowrap;
   p {
     padding: 15px 0;
   }
@@ -61,6 +66,15 @@ const Header = styled.div`
   .lyricist,
   .composer {
     width: 15%;
+  }
+
+  @media ${responsive.mobile} {
+    .num {
+      width: 20%;
+    }
+    .title {
+      width: 30%;
+    }
   }
 `;
 
