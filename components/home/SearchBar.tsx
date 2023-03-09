@@ -40,7 +40,12 @@ const SearchBar = () => {
         {searchType === 'song' ? '곡 명' : '가수 명'}
         <CgArrowsExchangeAltV size={24} />
       </Select>
-      <Search name="search" placeholder="곡/가수 명을 입력해주세요." ref={searchRef} />
+      <Search
+        name="search"
+        placeholder="곡/가수 명을 입력해주세요."
+        ref={searchRef}
+        autoComplete="off"
+      />
       <Button>검색</Button>
     </SearchBarContainer>
   );
