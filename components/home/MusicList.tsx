@@ -13,9 +13,9 @@ const MusicList = () => {
       <Header>
         <p className="num flex-center">곡 번호</p>
         <p className="title flex-center">곡 제목</p>
-        <p className="singer flex-center">가수</p>
-        <p className="lyricist flex-center">작사</p>
-        <p className="composer flex-center">작곡</p>
+        <p className="singer">가수</p>
+        <p className="lyricist">작사</p>
+        <p className="composer">작곡</p>
       </Header>
       <Body>
         {searchedMusic.map((music) => (
