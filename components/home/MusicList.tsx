@@ -51,7 +51,7 @@ const Header = styled.div`
   border-bottom: 1px solid ${lightGray};
   white-space: nowrap;
   p {
-    padding: 15px 0;
+    padding: 15px 7.5px;
   }
 
   .num {
