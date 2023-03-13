@@ -1,4 +1,4 @@
-import { FaUserCircle } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 import styled from 'styled-components';
 
 import { responsive } from '@/styles/theme';
@@ -6,7 +6,7 @@ import { responsive } from '@/styles/theme';
 const LoginBtn = () => {
   return (
     <LoginBtnContainer className="flex-center" onClick={() => alert(123)}>
-      <FaUserCircle />
+      <FcGoogle />
       <Text>로그인</Text>
     </LoginBtnContainer>
   );
@@ -19,6 +19,9 @@ const LoginBtnContainer = styled.div`
   height: 35px;
   border: 1px solid white;
   border-radius: 17.5px;
+  background-color: white;
+  color: black;
+  font-weight: 700;
   cursor: pointer;
 
   svg {
