@@ -30,7 +30,7 @@ const LoginBtnContainer = styled.div`
 
   @media ${responsive.mobile} {
     right: 15px;
-    width: 30px;
+    width: 35px;
     border: none;
 
     svg {
