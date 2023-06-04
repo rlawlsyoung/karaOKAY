@@ -12,12 +12,13 @@ export default NextAuth({
   session: {
     jwt: true,
   },
+
   providers: [
     Providers.Credentials({
       async authorize(credentials: CredentialsType | Record<string, string>) {
         const client = await connectToDatabase();
 
-        const usersCollection = client.db('auth-demo').collection('users');
+        const usersCollection = client.db('auth').collection('users');
 
         const user = await usersCollection.findOne({
           email: credentials.email,
@@ -25,14 +26,14 @@ export default NextAuth({
 
         if (!user) {
           client.close();
-          throw new Error('No user found!');
+          throw new Error('유저를 찾을 수 없습니다.');
         }
 
         const isValid = await verifyPassword(credentials.password, user.password);
 
         if (!isValid) {
           client.close();
-          throw new Error('Could not log you in.');
+          throw new Error('로그인 할 수 없습니다.');
         }
 
         client.close();
