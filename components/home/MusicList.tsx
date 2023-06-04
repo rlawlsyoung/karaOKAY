@@ -79,7 +79,7 @@ const Header = styled.div`
 `;
 
 const Body = styled.div`
-  height: calc(100vh - 278px);
+  height: calc(100vh - 272px);
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
