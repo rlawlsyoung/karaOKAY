@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { IoPeopleCircle } from 'react-icons/io5';
 import styled from 'styled-components';
 
@@ -5,14 +6,14 @@ import { responsive } from '@/styles/theme';
 
 const LoginBtn = () => {
   return (
-    <LoginBtnContainer className="flex-center" onClick={() => alert(123)}>
+    <LoginBtnContainer className="flex-center" href="/auth">
       <IoPeopleCircle />
       <Text>로그인</Text>
     </LoginBtnContainer>
   );
 };
 
-const LoginBtnContainer = styled.div`
+const LoginBtnContainer = styled(Link)`
   position: absolute;
   right: 25px;
   width: 100px;
