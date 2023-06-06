@@ -4,9 +4,13 @@ import styled from 'styled-components';
 import { blurredDeepGray, middleGray, responsive } from '@/styles/theme';
 
 const AuthForm = () => {
+  const [isSignIn, setIsSignIn] = useState(true);
+
+  const handleSignInChange = () => setIsSignIn(!isSignIn);
+
   return (
     <StyledAuthForm>
-      <Title>로그인</Title>
+      <Title>{isSignIn ? '로그인' : '회원가입'}</Title>
       <Wrapper>
         <Text>이메일</Text>
         <Input placeholder="이메일을 입력해주세요." />
@@ -16,10 +20,11 @@ const AuthForm = () => {
         <Input placeholder="비밀번호는 7글자 이상 입력해주세요." />
       </Wrapper>
       <SignUp>
-        아이디가 없다면?<p>회원가입</p>
+        {isSignIn ? '아이디가 없다면?' : '이미 아이디가 있다면?'}
+        <p onClick={handleSignInChange}>{isSignIn ? '로그인' : '회원가입'}</p>
       </SignUp>
 
-      <Button>로그인</Button>
+      <Button>{isSignIn ? '로그인' : '회원가입'}</Button>
     </StyledAuthForm>
   );
 };
